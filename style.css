@@ -1,0 +1,97 @@
+:root {
+  --shift: 25%;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: white;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.rgb-circles {
+  width: 100%;
+  height: 100%;
+}
+
+.controls {
+  padding: 16px 8px;
+}
+
+.rgb-colors {
+  position: relative;
+}
+
+.red {
+  background: #ff0000;
+}
+
+.green {
+  background: #00ff00;
+}
+
+.blue {
+  background: #0000ff;
+}
+
+.circle {
+  width: 50%;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  mix-blend-mode: screen;
+  isolation: isolate;
+}
+
+.circle:nth-child(1) {
+  transform: translateX(calc(-50% - var(--shift)));
+}
+
+.circle:nth-child(2) {
+  transform: translateX(-50%) translateY(50%);
+}
+
+.circle:nth-child(3) {
+  transform: translateX(calc(-50% + var(--shift)));
+}
+
+circle {
+  mix-blend-mode: screen;
+}
+
+input[type="range"] {
+  appearance: none;
+  background: transparent;
+}
+
+.controls-group {
+  display: flex;
+}
+
+#red-range-input::-webkit-slider-runnable-track {
+/*  height: 20px;*/
+/*  width: 100%;*/
+  background: linear-gradient(to right, #000, #f00);
+}
+
+#green-range-input {
+  background: linear-gradient(to right, #000, #0f0);
+}
+
+#blue-range-input {
+  background: linear-gradient(to right, #000, #00f);
+}
+

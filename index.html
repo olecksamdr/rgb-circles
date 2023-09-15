@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>RGB</title>
+</head>
+<body>
+  <div class="container">
+    <!-- слайдери -->
+    <!-- чекбокси -->
+    <!-- drag & drop -->
+
+    <!-- <div class="rgb-colors">
+      <div class="circle red"></div>
+      <div class="circle blue"></div>
+      <div class="circle green"></div>
+    </div> -->
+
+    <!-- зробити за допомогою svg - так буде менше CSS коду -->
+    <!-- https://www.sarasoueidan.com/blog/svg-art-direction-using-viewbox/ -->
+    <svg class="rgb-circles">
+      <circle id="red-circle" cx="40" cy="40" r="40" fill="rgb(255, 0, 0)"/>
+      <circle id="green-circle" cx="80" cy="40" r="40" fill="rgb(0, 255, 0)"/>
+      <circle id="blue-circle" cx="60" cy="80" r="40" fill="rgb(0, 0, 255)"/>
+    </svg>
+
+    <div class="controls">
+      <div class="controls-group">
+        <!-- Чи може бути один label для двох input? -->
+        <!-- Взяти ідею інпутів в adobe color -->
+        <input type="checkbox" name="" id="">
+        <label>
+          red
+          <input
+            id="red-range-input"
+            aria-controls="red-circle"
+            type="range"
+            value="255"
+            min="0"
+            max="255"
+            step="1"
+          >
+        </label>
+      </div>
+
+      <div class="controls-group">
+        <input type="checkbox" name="" id="">
+        <label>
+          green
+          <input
+            id="green-range-input"
+            aria-controls="green-circle"
+            type="range"
+            value="255"
+            min="0"
+            max="255"
+            step="1"
+          >
+        </label>
+      </div>  
+
+      <div class="controls-group">
+        <input type="checkbox" name="" id="">
+        <label>
+          blue
+          <input
+            id="blue-range-input"
+            aria-controls="blue-circle"
+            type="range"
+            value="255"
+            min="0"
+            max="255"
+            step="1"
+          >
+        </label>
+      </div>
+    </div>
+    <input
+      type="color"
+      value="#ffffff"
+      id="color-picker"
+      name="color-picker"
+    >
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
